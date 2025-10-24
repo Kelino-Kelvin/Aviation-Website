@@ -10,7 +10,15 @@
 </head>
 <body class="bg-linear-to-br from-black to-[#4A1200] h-screen">
 
-    <img src="../images/airplane-1.png" alt="bg" class="absolute left-[-200px] bottom-0">
+    <img src="../images/airplane-1.png" alt="bg" id="slidingImage" class="absolute left-[-200px] bottom-0 opacity-0 -translate-x-12 transition-all duration-2000">
+    <script>
+         window.addEventListener('load', () => {
+         // start 2s after full load
+            setTimeout(() => {
+            document.getElementById('slidingImage').classList.remove('opacity-0', '-translate-x-12');
+            }, 2000);
+        });
+    </script>
 
     <div class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col gap-3 items-center">
         <div class="text-white text-5xl font-extrabold text-center">
@@ -29,7 +37,7 @@
             Say Cheeese!
         </div>
 
-        <a href="#" class="group bg-white pt-2 pb-1.5 px-5 rounded-xl mt-[20px] w-40 cursor-pointer font-semibold hover:shadow-[0_0_10px_1px_white] flex justify-center items-center gap-2">
+        <a href="./lesson.html" class="group bg-white pt-2 pb-1.5 px-5 rounded-xl mt-[20px] w-40 cursor-pointer font-semibold hover:shadow-[0_0_10px_1px_white] flex justify-center items-center gap-2">
             See Lesson <span class="inline-block transform transition-transform duration-300 group-hover:translate-x-1.5">&rarr;</span>
         </a>
     </div>

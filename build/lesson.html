@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AvHistory</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-neutral-900">
+    <section class="bg-custom-image1 bg-cover bg-center h-lvh p-6 pb-12 mb-8 text-white relative">
+        <div class="w-auto rounded-2xl h-full p-2 backdrop-blur-[5px] shadow-white text-9xl flex justify-center items-center relative z-2 bg-[#ffffff1e]">
+            Enjoy The Show!
+        </div>
+        <div class="absolute bottom-0 inset-x-0 h-40 w-full bg-linear-to-t from-neutral-900 to-transparent"></div>
+    </section>
+
+    <!-- History Era 1 -->
+    <div class="relative">
+        <div class="min-h-10 flex justify-center items-center bg-white rounded-3xl font-bold mx-5 mb-5 sticky top-3 z-10">
+            It's 1903, and <span class="ml-1 text-amber-800">Wood can Fly!</span>
+        </div>
+
+        <!-- The story and image part -->
+        <div class="wrapper relative h-fit">
+            <!-- image bg -->
+            <div class="w-[380px] sm:w-[480px] md:w-[650px] h-screen ml-auto sticky top-0 py-4 pl-4 flex flex-col justify-center gap-3">
+                <div class="h-[40%]">
+                    <img src="../images/wright_flyer-removebg-preview.png" alt="wright-flyer" class="bg-contain bg-center">
+                </div>
+                <div class="h-[40%]">
+                    <img src="../images/boeing-247-removebg-preview.png" alt="boeing-247">
+                </div>
+            </div>
+
+            <!-- write up -->
+            <div class="max-w-[680px] min-w-[300px] p-5 absolute top-0">
+                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] backdrop-blur-sm rounded-2xl text-white text-[20px] relative">
+                    The birth of powered flight began in 1903 when the Wright Flyer lifted off at Kitty Hawk, marking the world’s first controlled, sustained flight. This achievement ignited a wave of global experimentation, as inventors sought to improve lift, control, and endurance. Throughout the 1910s, aviation advanced rapidly through both competition and war-driven innovation.
+
+                    <div class="absolute bg-white rounded-full p-2 top-[-20px] right-[20px]">
+                        <img src="../images/paperplane.svg" alt="svg">
+                    </div>
+                </div>
+
+                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] backdrop-blur-sm rounded-2xl text-white text-[20px] relative">
+                    By the 1920s, aircraft evolved from fragile biplanes into sturdier monoplanes like the Junkers F.13, the first all-metal passenger aircraft. Manufacturers such as Fokker and Ford introduced enclosed cabins, allowing passengers to travel more comfortably and safely. Twin-engine configurations became standard, increasing reliability for early air routes.
+
+                    <div class="absolute bg-white rounded-full p-2 top-[-20px] right-[20px]">
+                        <img src="../images/paperplane.svg" alt="svg">
+                    </div>
+                </div>
+
+                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] backdrop-blur-sm rounded-2xl text-white text-[20px] relative">
+                    The rise of airlines such as KLM, Pan American, and Lufthansa in the late 1920s marked the dawn of commercial air service. Aircraft like the Ford Trimotor and de Havilland Dragon Rapide carried mail and a handful of passengers between cities. Though air travel was still limited to the wealthy, it symbolized progress and adventure.
+
+                    <div class="absolute bg-white rounded-full p-2 top-[-20px] right-[20px]">
+                        <img src="../images/paperplane.svg" alt="svg">
+                    </div>
+                </div>
+
+                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] backdrop-blur-sm rounded-2xl text-white text-[20px] relative">
+                    By the 1930s, advancements in aerodynamics, radial engines, and metal airframes created faster and more dependable aircraft. Designs such as the Boeing 247 and Douglas DC-2 pushed the limits of performance and range. These breakthroughs laid the groundwork for the Douglas DC-3, the aircraft that would transform aviation in the next era.
+
+                    <div class="absolute bg-white rounded-full p-2 top-[-20px] right-[20px]">
+                        <img src="../images/paperplane.svg" alt="svg">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h-[200vh]"></div>
+
+    <script>
+        (function () {
+        // debounce helper
+        function debounce(fn, wait = 100) {
+            let t;
+            return (...args) => {
+            clearTimeout(t);
+            t = setTimeout(() => fn(...args), wait);
+            };
+        }
+
+        // compute and set height for a single wrapper
+        function adjustWrapperHeight(wrapper) {
+            // get wrapper top to measure children relative to it
+            const wrapperRect = wrapper.getBoundingClientRect();
+            const wrapperTop = wrapperRect.top + window.scrollY;
+
+            // measure direct children only
+            const children = wrapper.querySelectorAll(':scope > *');
+            let maxBottom = 0;
+
+            children.forEach(child => {
+            // include margins/paddings by using getBoundingClientRect
+            const rect = child.getBoundingClientRect();
+            const childBottom = rect.bottom + window.scrollY;
+            // compute bottom relative to wrapper top
+            const relativeBottom = childBottom - wrapperTop;
+            if (relativeBottom > maxBottom) maxBottom = relativeBottom;
+            });
+
+            // If no children or all have 0 height, keep at least 0
+            if (maxBottom < 0) maxBottom = 0;
+
+            // set wrapper min-height so it can grow but not shrink below content
+            wrapper.style.minHeight = Math.ceil(maxBottom) + 'px';
+        }
+
+        // adjust all wrappers
+        const adjustAll = () => {
+            const wrappers = document.querySelectorAll('.wrapper');
+            wrappers.forEach(w => adjustWrapperHeight(w));
+        };
+
+        const debouncedAdjustAll = debounce(adjustAll, 120);
+
+        // run once after load (and a little later to allow font/image layout)
+        window.addEventListener('load', () => {
+            adjustAll();
+            // also run a bit later in case fonts/images shift layout
+            setTimeout(adjustAll, 300);
+        });
+
+        // on resize
+        window.addEventListener('resize', debouncedAdjustAll);
+
+        // observe wrappers and their children for changes (ResizeObserver + MutationObserver)
+        const ro = new ResizeObserver(debouncedAdjustAll);
+        const mo = new MutationObserver(debouncedAdjustAll);
+
+        // initialize observers for each wrapper
+        function initObservers() {
+            document.querySelectorAll('.wrapper').forEach(wrapper => {
+            // observe wrapper size changes
+            ro.observe(wrapper);
+
+            // observe child additions/removals or attribute changes inside wrapper
+            mo.observe(wrapper, { childList: true, subtree: true, attributes: true, attributeFilter: ['style', 'class'] });
+
+            // ensure images inside wrapper trigger a reflow when they load
+            const imgs = wrapper.querySelectorAll('img');
+            imgs.forEach(img => {
+                if (!img.complete) {
+                img.addEventListener('load', debouncedAdjustAll, { once: true });
+                img.addEventListener('error', debouncedAdjustAll, { once: true });
+                }
+            });
+            });
+        }
+
+        // run init now and whenever DOM changes could add wrappers
+        initObservers();
+        // also watch document for new wrappers being added
+        const topMo = new MutationObserver(() => {
+            initObservers();
+            debouncedAdjustAll();
+        });
+        topMo.observe(document.body, { childList: true, subtree: true });
+
+        // expose an API if you need to trigger manually
+        window.adjustWrappers = adjustAll;
+        })();
+    </script>
+
+</body>
+</html>

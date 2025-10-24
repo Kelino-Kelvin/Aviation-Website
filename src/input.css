@@ -2,8 +2,19 @@
 
 @import "tailwindcss";
 
+@theme{
+    /* Background Images */
+    --background-image-custom-image1: url('../images/airplane-bg-1.jpg');
+}
+
 @layer base{
     body{
         font-family: "Josefin Sans", sans-serif;
     }
+}
+
+
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
 }
