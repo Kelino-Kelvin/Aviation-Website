@@ -5,6 +5,8 @@
 @theme{
     /* Background Images */
     --background-image-custom-image1: url('../images/airplane-bg-1.jpg');
+    
+    --background-image-custom-dc3Image: url('../images/dc-3.png')
 }
 
 @layer base{

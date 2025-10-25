@@ -8,6 +8,36 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-neutral-900">
+
+    <!-- Mobile menu drop down-->
+    <div id="menuOptions" class="h-svh w-full bg-[#82828282] backdrop-blur-xl flex flex-col gap-3 items-center justify-center text-white fixed -top-full z-20 duration-300 ease-out">
+        <button onclick="toggleMenuUp()" class="cursor-pointer uppercase text-sm flex items-center bg-white text-black rounded p-1 absolute top-4 right-4">
+            Close
+            <img src="../images/close.svg" alt="" class="h-5 mb-px">
+        </button>
+
+        <a href="./index.html" class="uppercase font-light pt-0.5 text-sm">
+            <span>Home</span>
+        </a>
+        <a href="https://www.airbus.com/en" target="_blank" class="uppercase flex items-center gap-0.5 font-light pt-0.5 text-sm">
+            <span>Airbus</span>
+            <img src="../images/link.svg" alt="link" class="h-4 mb-[3px]">
+        </a>
+        <a href="https://www.boeing.com" target="_blank" class="uppercase flex items-center gap-0.5 font-light pt-0.5 text-sm">
+            <span>Boeing</span>
+            <img src="../images/link.svg" alt="link" class="h-4 mb-[3px]">
+        </a>
+        <a href="http://english.comac.cc" target="_blank" class="uppercase flex items-center gap-0.5 font-light pt-0.5 text-sm">
+            <span>Comac</span>
+            <img src="../images/link.svg" alt="link" class="h-4 mb-[3px]">
+        </a>
+        <a href="https://www.embraer.com/en" target="_blank" class="uppercase flex items-center gap-0.5 font-light pt-0.5 text-sm">
+            <span>Embraer</span>
+            <img src="../images/link.svg" alt="link" class="h-4 mb-[3px]">
+        </a>
+    </div>
+
+    <!-- Hero Section -->
     <section class="bg-custom-image1 bg-cover bg-center h-lvh p-6 pb-12 mb-8 text-white relative">
         <div class="w-auto rounded-2xl h-full p-2 backdrop-blur-[5px] shadow-white text-9xl flex justify-center items-center relative z-2 bg-[#ffffff1e]">
             Enjoy The Show!
@@ -15,21 +45,62 @@
         <div class="absolute bottom-0 inset-x-0 h-40 w-full bg-linear-to-t from-neutral-900 to-transparent"></div>
     </section>
 
-    <!-- History Era 1 -->
-    <div class="relative">
-        <div class="min-h-10 flex justify-center items-center bg-white rounded-3xl font-bold mx-5 mb-5 sticky top-3 z-10">
-            It's 1903, and <span class="ml-1 text-amber-800">Wood can Fly!</span>
+    <!-- nav section -->
+    <div class="w-auto mx-2 pr-4 h-9 bg-[#82828282] rounded backdrop-blur-xl text-white sticky top-2 z-10 flex items-center justify-center p-3">
+        <!-- large screen -->
+        <div class="hidden md:flex w-full justify-between">
+            <div class="flex gap-2">
+                <a href="./index.html">
+                    <img src="../images/home.svg" alt="home" class="h-6">
+                </a>
+                <div class="border rounded"></div>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <span class="font-light text-[14px] mr-[-8px] pt-0.5">Today's Air Giants:</span>
+                <a href="https://www.airbus.com/en" target="_blank" class="uppercase flex items-center gap-0.5 font-light pt-0.5 text-sm">
+                    <span>Airbus</span>
+                    <img src="../images/link.svg" alt="link" class="h-4 mb-[3px]">
+                </a>
+                <a href="https://www.boeing.com" target="_blank" class="uppercase flex items-center gap-0.5 font-light pt-0.5 text-sm">
+                    <span>Boeing</span>
+                    <img src="../images/link.svg" alt="link" class="h-4 mb-[3px]">
+                </a>
+                <a href="http://english.comac.cc" target="_blank" class="uppercase flex items-center gap-0.5 font-light pt-0.5 text-sm">
+                    <span>Comac</span>
+                    <img src="../images/link.svg" alt="link" class="h-4 mb-[3px]">
+                </a>
+                <a href="https://www.embraer.com/en" target="_blank" class="uppercase flex items-center gap-0.5 font-light pt-0.5 text-sm">
+                    <span>Embraer</span>
+                    <img src="../images/link.svg" alt="link" class="h-4 mb-[3px]">
+                </a>
+            </div>
         </div>
+
+        <!-- small screen -->
+        <button onclick="toggleMenuDown()" class="uppercase font-light text-[14px] flex items-center justify-center w-full cursor-pointer md:hidden">
+            Menu
+            <img src="../images/down-arrow.svg" alt="" class="h-5 mb-1">
+        </button>
+
+
+    </div>
+
+    <!-- History Era 1 -->
+    <div class="relative mb-4">
+        <!-- <div class="min-h-10 flex justify-center items-center bg-white rounded-3xl font-bold mx-5 mb-5 sticky top-3 z-10">
+            It's 1903, and <span class="ml-1 text-amber-800">Wood can Fly!</span>
+        </div> -->
 
         <!-- The story and image part -->
         <div class="wrapper relative h-fit">
             <!-- image bg -->
-            <div class="w-[380px] sm:w-[480px] md:w-[650px] h-screen ml-auto sticky top-0 py-4 pl-4 flex flex-col justify-center gap-3">
+            <div class="w-[380px] sm:w-[480px] md:w-[650px] h-svh ml-auto sticky top-0 py-4 pl-4 flex flex-col justify-center gap-3">
                 <div class="h-[40%]">
-                    <img src="../images/wright_flyer-removebg-preview.png" alt="wright-flyer" class="bg-contain bg-center">
+                    <img src="../images/wright_flyer-removebg-preview.png" alt="wright-flyer" class="">
                 </div>
                 <div class="h-[40%]">
-                    <img src="../images/boeing-247-removebg-preview.png" alt="boeing-247">
+                    <img src="../images/boeing-247-removebg-preview.png" alt="boeing-247" class="">
                 </div>
             </div>
 
@@ -71,7 +142,56 @@
         </div>
     </div>
 
-    <div class="h-[200vh]"></div>
+        <!-- History Era 2 -->
+    <div class="relative mb-4">
+        <!-- <div class="min-h-10 flex justify-center items-center bg-amber-800 rounded-3xl font-bold mx-5 mb-5 sticky top-3 z-10">
+            1939 - Now we've got <span class="ml-1 text-white">Piston Engines.</span>
+        </div> -->
+
+        <!-- The story and image part -->
+        <div class="wrapper relative h-fit">
+            <!-- image bg -->
+            <div class="w-[380px] sm:w-[480px] md:w-[650px] h-svh mr-auto sticky overflow-x-hidden top-0 py-4 pr-4 flex flex-col justify-center">
+                <div class="h-[80%] bg-custom-dc3Image bg-position-[calc(-100px)_center] bg-no-repeat"></div>
+            </div>
+
+            <!-- write up -->
+            <div class="max-w-[680px] min-w-[300px] p-5 absolute top-0 right-0">
+                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] backdrop-blur-sm rounded-2xl text-white text-[20px] relative">
+                    The outbreak of World War II accelerated aircraft design and production on a massive scale. Engineers developed stronger all-metal airframes, more powerful piston engines, and early pressurization systems. These wartime technologies soon transitioned into civilian use, revolutionizing postwar air travel.
+
+                    <div class="absolute bg-white rounded-full p-2 top-[-20px] right-[20px]">
+                        <img src="../images/paperplane.svg" alt="svg">
+                    </div>
+                </div>
+
+                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] backdrop-blur-sm rounded-2xl text-white text-[20px] relative">
+                    The Douglas DC-3, born just before the war, became the backbone of commercial aviation during the 1940s. Its reliability, speed, and capacity made air travel profitable for airlines for the first time. Following it came larger, more luxurious aircraft like the Lockheed Constellation and Douglas DC-7.
+
+                    <div class="absolute bg-white rounded-full p-2 top-[-20px] right-[20px]">
+                        <img src="../images/paperplane.svg" alt="svg">
+                    </div>
+                </div>
+
+                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] backdrop-blur-sm rounded-2xl text-white text-[20px] relative">
+                    Passengers in this era experienced unprecedented comfort, with pressurized cabins allowing smooth flights above the weather. Airlines expanded across continents, and intercontinental journeys became symbols of prestige and progress. Air travel had matured from novelty to necessity, connecting nations as never before.
+
+                    <div class="absolute bg-white rounded-full p-2 top-[-20px] right-[20px]">
+                        <img src="../images/paperplane.svg" alt="svg">
+                    </div>
+                </div>
+
+                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] backdrop-blur-sm rounded-2xl text-white text-[20px] relative">
+                    Yet, piston engines had reached their limits in altitude, speed, and range. The demand for faster, higher, and more efficient aircraft pushed engineers toward jet propulsion. By the mid-1950s, experimental jetliners like the de Havilland Comet hinted at the future of commercial flight.
+
+                    <div class="absolute bg-white rounded-full p-2 top-[-20px] right-[20px]">
+                        <img src="../images/paperplane.svg" alt="svg">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <script>
         (function () {
@@ -164,6 +284,18 @@
         // expose an API if you need to trigger manually
         window.adjustWrappers = adjustAll;
         })();
+    </script>
+
+    <script>
+        function toggleMenuDown() {
+            let menu = document.getElementById('menuOptions');
+            menu.style.top = '0';
+        }
+        
+        function toggleMenuUp() {
+            let menu = document.getElementById('menuOptions');
+            menu.style.top = '-100%';
+        }
     </script>
 
 </body>
