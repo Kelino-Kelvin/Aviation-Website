@@ -6,7 +6,12 @@
     /* Background Images */
     --background-image-custom-image1: url('../images/airplane-bg-1.jpg');
     
-    --background-image-custom-dc3Image: url('../images/dc-3.png')
+    --background-image-custom-dc3Image: url('../images/dc-3.png');
+    --background-image-custom-dc8Image: url('../images/dc-8.png');
+    --background-image-custom-dc10image: url('../images/dc-10.png');
+    --background-image-custom-b747image: url('../images/b-747.png');
+    --background-image-custom-b787image: url('../images/b-787.png');
+    --background-image-custom-a350image: url('../images/a-350.png');
 }
 
 @layer base{
@@ -15,8 +20,35 @@
     }
 }
 
+@layer utilities{
+    .animate-slideAvWords {
+    animation: slideAvWords 10s infinite ease-out;
+    }
+}
+
 
 @keyframes slide-in-left {
   from { opacity: 0; transform: translateX(-50px); }
   to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideAvWords {
+  0%, 10% {
+    transform: translateY(0);
+  }
+  20%, 30% {
+    transform: translateY(-1.2em);
+  }
+  40%, 50% {
+    transform: translateY(-2.4em);
+  }
+  60%, 70% {
+    transform: translateY(-3.6em);
+  }
+  80%, 90% {
+    transform: translateY(-4.8em);
+  }
+  100% {
+    transform: translateY(-6em);
+  }
 }
