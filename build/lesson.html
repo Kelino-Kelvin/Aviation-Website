@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AvHistory</title>
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../images/plane-icon.svg">
 </head>
-<body class="bg-neutral-900">
+<body class="bg-neutral-900 light:bg-white transition-colors duration-500">
 
     <!-- Mobile menu drop down-->
     <div id="menuOptions" class="h-svh w-full bg-[#82828282] backdrop-blur-xl flex flex-col gap-3 items-center justify-center text-white fixed -top-full z-20 duration-300 ease-out">
@@ -38,24 +39,30 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="bg-custom-image1 bg-cover bg-center h-lvh p-6 pb-12 mb-8 text-white relative">
+    <main class="bg-custom-image1 bg-cover bg-center h-lvh p-6 pb-12 mb-8 text-white relative">
         <div class="w-auto rounded-2xl h-full p-2 backdrop-blur-[5px] shadow-white text-9xl flex justify-center items-center relative z-2 bg-[#ffffff1e]">
             Enjoy The Show!
         </div>
-        <div class="absolute bottom-0 inset-x-0 h-40 w-full bg-linear-to-t from-neutral-900 to-transparent"></div>
-    </section>
+        <div class="absolute bottom-0 inset-x-0 h-40 w-full bg-linear-to-t from-(--fade-bg) to-transparent"></div>
+    </main>
 
     <!-- nav section -->
     <div class="w-auto mx-2 pr-4 h-9 bg-[#82828282] rounded backdrop-blur-xl text-white sticky top-2 z-10 flex items-center justify-center p-3">
         <!-- large screen -->
         <div class="hidden md:flex w-full justify-between">
-            <div class="flex">
-                <a href="./index.html">
-                    <img src="../images/home.svg" alt="home" class="h-6">
-                </a>
+            <div class="flex gap-2">
+                <figure class="flex">
+                    <a href="./index.html">
+                        <img src="../images/home.svg" alt="home" class="h-6">
+                    </a>
+                </figure>
+                <button id="toggle" class="w-26 h-6 pt-2.5 rounded bg-white light:bg-black text-black light:text-white cursor-pointer flex items-end justify-center">
+                    <span class="light:hide">Go Light!</span>
+                    <span class="hidden light:show">Go Dark!</span>
+                </button>
             </div>
 
-            <div class="flex items-center gap-4">
+            <nav class="flex items-center gap-4">
                 <span class="font-light text-[14px] mr-[-8px] pt-0.5">Today's Air Giants:</span>
                 <a href="https://www.airbus.com/en" target="_blank" class="uppercase flex items-center gap-0.5 font-light pt-0.5 text-sm hover:underline">
                     <span>Airbus</span>
@@ -73,7 +80,7 @@
                     <span>Embraer</span>
                     <img src="../images/link.svg" alt="link" class="h-4 mb-[3px]">
                 </a>
-            </div>
+            </nav>
         </div>
 
         <!-- small screen -->
@@ -87,7 +94,7 @@
 
     <!-- History Era 1 -->
     <div class="relative mb-4">
-        <div class="min-h-10 flex justify-center items-center bg-white rounded-3xl font-bold mx-5 mt-3">
+        <div class="min-h-10 flex justify-center items-center bg-white light:bg-black light:text-white rounded-3xl font-bold mx-5 mt-3">
             It's 1903, and <span class="ml-1 text-amber-800">Wood can Fly!</span>
         </div>
 
@@ -105,7 +112,7 @@
 
             <!-- write up -->
             <div class="max-w-[680px] min-w-[300px] p-5 absolute top-0">
-                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] backdrop-blur-sm rounded-2xl text-white text-[20px] relative">
+                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] light:bg-card-light backdrop-blur-sm rounded-2xl text-white light:text-black text-[20px] relative">
                     The birth of powered flight began in 1903 when the Wright Flyer lifted off at Kitty Hawk, marking the world’s first controlled, sustained flight. This achievement ignited a wave of global experimentation, as inventors sought to improve lift, control, and endurance. Throughout the 1910s, aviation advanced rapidly through both competition and war-driven innovation.
 
                     <div class="absolute bg-white rounded-full p-2 top-[-20px] right-[20px]">
@@ -113,7 +120,7 @@
                     </div>
                 </div>
 
-                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] backdrop-blur-sm rounded-2xl text-white text-[20px] relative">
+                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] light:bg-card-light backdrop-blur-sm rounded-2xl text-white light:text-black text-[20px] relative">
                     By the 1920s, aircraft evolved from fragile biplanes into sturdier monoplanes like the Junkers F.13, the first all-metal passenger aircraft. Manufacturers such as Fokker and Ford introduced enclosed cabins, allowing passengers to travel more comfortably and safely. Twin-engine configurations became standard, increasing reliability for early air routes.
 
                     <div class="absolute bg-white rounded-full p-2 top-[-20px] right-[20px]">
@@ -121,7 +128,7 @@
                     </div>
                 </div>
 
-                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] backdrop-blur-sm rounded-2xl text-white text-[20px] relative">
+                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] light:bg-card-light backdrop-blur-sm rounded-2xl text-white light:text-black text-[20px] relative">
                     The rise of airlines such as KLM, Pan American, and Lufthansa in the late 1920s marked the dawn of commercial air service. Aircraft like the Ford Trimotor and de Havilland Dragon Rapide carried mail and a handful of passengers between cities. Though air travel was still limited to the wealthy, it symbolized progress and adventure.
 
                     <div class="absolute bg-white rounded-full p-2 top-[-20px] right-[20px]">
@@ -129,7 +136,7 @@
                     </div>
                 </div>
 
-                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] backdrop-blur-sm rounded-2xl text-white text-[20px] relative">
+                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] light:bg-card-light backdrop-blur-sm rounded-2xl text-white light:text-black text-[20px] relative">
                     By the 1930s, advancements in aerodynamics, radial engines, and metal airframes created faster and more dependable aircraft. Designs such as the Boeing 247 and Douglas DC-2 pushed the limits of performance and range. These breakthroughs laid the groundwork for the Douglas DC-3, the aircraft that would transform aviation in the next era.
 
                     <div class="absolute bg-white rounded-full p-2 top-[-20px] right-[20px]">
@@ -156,7 +163,7 @@
 
             <!-- write up -->
             <div class="max-w-[680px] min-w-[300px] p-5 absolute top-0 right-0">
-                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] backdrop-blur-sm rounded-2xl text-white text-[20px] relative">
+                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] light:bg-card-light backdrop-blur-sm rounded-2xl text-white light:text-black text-[20px] relative">
                     The outbreak of World War II accelerated aircraft design and production on a massive scale. Engineers developed stronger all-metal airframes, more powerful piston engines, and early pressurization systems. These wartime technologies soon transitioned into civilian use, revolutionizing postwar air travel.
 
                     <div class="absolute bg-white rounded-full p-2 top-[-20px] right-[20px]">
@@ -164,7 +171,7 @@
                     </div>
                 </div>
 
-                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] backdrop-blur-sm rounded-2xl text-white text-[20px] relative">
+                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] light:bg-card-light backdrop-blur-sm rounded-2xl text-white light:text-black text-[20px] relative">
                     The Douglas DC-3, born just before the war, became the backbone of commercial aviation during the 1940s. Its reliability, speed, and capacity made air travel profitable for airlines for the first time. Following it came larger, more luxurious aircraft like the Lockheed Constellation and Douglas DC-7.
 
                     <div class="absolute bg-white rounded-full p-2 top-[-20px] right-[20px]">
@@ -172,7 +179,7 @@
                     </div>
                 </div>
 
-                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] backdrop-blur-sm rounded-2xl text-white text-[20px] relative">
+                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] light:bg-card-light backdrop-blur-sm rounded-2xl text-white light:text-black text-[20px] relative">
                     Passengers in this era experienced unprecedented comfort, with pressurized cabins allowing smooth flights above the weather. Airlines expanded across continents, and intercontinental journeys became symbols of prestige and progress. Air travel had matured from novelty to necessity, connecting nations as never before.
 
                     <div class="absolute bg-white rounded-full p-2 top-[-20px] right-[20px]">
@@ -180,7 +187,7 @@
                     </div>
                 </div>
 
-                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] backdrop-blur-sm rounded-2xl text-white text-[20px] relative">
+                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] light:bg-card-light backdrop-blur-sm rounded-2xl text-white light:text-black text-[20px] relative">
                     Yet, piston engines had reached their limits in altitude, speed, and range. The demand for faster, higher, and more efficient aircraft pushed engineers toward jet propulsion. By the mid-1950s, experimental jetliners like the de Havilland Comet hinted at the future of commercial flight.
 
                     <div class="absolute bg-white rounded-full p-2 top-[-20px] right-[20px]">
@@ -194,7 +201,7 @@
 
     <!-- History Era 3 -->
     <div class="relative mb-4">
-        <div class="min-h-10 flex justify-center items-center bg-white rounded-3xl font-bold mx-5 mt-3">
+        <div class="min-h-10 flex justify-center items-center bg-white light:bg-black light:text-white rounded-3xl font-bold mx-5 mt-3">
             1954. <span class="ml-1 text-amber-800">What's a Plane and What's a Jet</span>
         </div>
 
@@ -207,7 +214,7 @@
 
             <!-- write up -->
             <div class="max-w-[680px] min-w-[300px] p-5 absolute top-0">
-                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] backdrop-blur-sm rounded-2xl text-white text-[20px] relative">
+                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] light:bg-card-light backdrop-blur-sm rounded-2xl text-white light:text-black text-[20px] relative">
                     The introduction of the Boeing 707 in 1958 marked the true beginning of the Jet Age. With its swept wings and turbojet engines, it could fly higher and faster than any propeller-driven airliner. The world suddenly became smaller, as transatlantic flights were cut from 15 hours to less than 8.
 
                     <div class="absolute bg-white rounded-full p-2 top-[-20px] right-[20px]">
@@ -215,7 +222,7 @@
                     </div>
                 </div>
 
-                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] backdrop-blur-sm rounded-2xl text-white text-[20px] relative">
+                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] light:bg-card-light backdrop-blur-sm rounded-2xl text-white light:text-black text-[20px] relative">
                     Earlier aircraft like the de Havilland Comet had proven the potential of jet travel, despite early structural failures that reshaped the industry’s approach to safety. The Douglas DC-8 and Sud Aviation Caravelle soon joined the skies, offering speed, comfort, and reliability to a growing middle class. Air travel was no longer a luxury for the few — it became a defining feature of modern life.
 
                     <div class="absolute bg-white rounded-full p-2 top-[-20px] right-[20px]">
@@ -223,7 +230,7 @@
                     </div>
                 </div>
 
-                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] backdrop-blur-sm rounded-2xl text-white text-[20px] relative">
+                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] light:bg-card-light backdrop-blur-sm rounded-2xl text-white light:text-black text-[20px] relative">
                     Jet engines also changed airline economics and airport design. Larger runways, pressurized cabins, and advanced navigation systems were now essential. The world’s major airports transformed into global hubs, handling passengers at unprecedented volumes.
 
                     <div class="absolute bg-white rounded-full p-2 top-[-20px] right-[20px]">
@@ -231,7 +238,7 @@
                     </div>
                 </div>
 
-                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] backdrop-blur-sm rounded-2xl text-white text-[20px] relative">
+                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] light:bg-card-light backdrop-blur-sm rounded-2xl text-white light:text-black text-[20px] relative">
                     By the late 1960s, aviation technology was poised for another leap. Engineers sought to carry more passengers while reducing costs per seat, leading to the birth of widebody designs. This ambition gave rise to aircraft like the Boeing 747, setting the stage for mass international travel.
 
                     <div class="absolute bg-white rounded-full p-2 top-[-20px] right-[20px]">
@@ -245,7 +252,7 @@
 
     <!-- Collect mail section -->
     <div class="mb-8">
-        <div class="flex flex-col items-center text-white mb-2">
+        <div class="flex flex-col items-center text-white light:text-black mb-2">
             <P class="font-bold text-2xl text-center">
                 So... Enjoying what you've read thus far?
             </P>
@@ -256,8 +263,8 @@
             </P>
         </div>
         <form class="mx-2 mb-2 flex items-center flex-wrap gap-3">
-            <input type="email" placeholder="Enter email" class="bg-[#ffffff36] font-light text-white flex-1 min-w-[300px] rounded py-1 px-2 outline-none">
-            <button class="bg-white px-2 py-1 rounded cursor-pointer flex-auto w-full md:flex-none md:w-auto flex justify-center gap-2">
+            <input type="email" placeholder="Enter email" class="bg-[#ffffff36] light:bg-card-light font-light text-white light:text-black flex-1 min-w-[300px] rounded py-1 px-2 outline-none">
+            <button class="bg-white light:bg-black light:text-white px-2 py-1 rounded cursor-pointer flex-auto w-full md:flex-none md:w-auto flex justify-center gap-2">
             <span>Confirm Email</span>
                 <img src="../images/mail-send.svg" alt="" class="w-5 -mt-0.5">
             </button>
@@ -280,7 +287,7 @@
 
             <!-- write up -->
             <div class="max-w-[680px] min-w-[300px] p-5 absolute top-0 right-0">
-                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] backdrop-blur-sm rounded-2xl text-white text-[20px] relative">
+                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] light:bg-card-light backdrop-blur-sm rounded-2xl text-white light:text-black text-[20px] relative">
                     The arrival of the Boeing 747 in 1970 ushered in the era of widebody airliners. With its double-deck design and massive capacity, it made air travel affordable for millions worldwide. Airlines began operating on a truly global scale, connecting cities across every continent.
 
                     <div class="absolute bg-white rounded-full p-2 top-[-20px] right-[20px]">
@@ -288,7 +295,7 @@
                     </div>
                 </div>
 
-                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] backdrop-blur-sm rounded-2xl text-white text-[20px] relative">
+                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] light:bg-card-light backdrop-blur-sm rounded-2xl text-white light:text-black text-[20px] relative">
                     Other widebodies like the McDonnell Douglas DC-10, Lockheed L-1011 TriStar, and later the Airbus A300 brought comfort and scale to international routes. The introduction of high-bypass turbofan engines drastically improved fuel efficiency and reduced noise. Flying was no longer elite — it became the world’s preferred mode of travel.
 
                     <div class="absolute bg-white rounded-full p-2 top-[-20px] right-[20px]">
@@ -296,7 +303,7 @@
                     </div>
                 </div>
 
-                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] backdrop-blur-sm rounded-2xl text-white text-[20px] relative">
+                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] light:bg-card-light backdrop-blur-sm rounded-2xl text-white light:text-black text-[20px] relative">
                     By the 1980s and 1990s, aviation entered the digital age with fly-by-wire systems and computer-assisted cockpits. The Airbus A320 pioneered this technology, replacing cables with electronic signals for precision control. Meanwhile, the Boeing 777 introduced glass cockpits and extended-range operations, redefining efficiency for twin-engine jets.
 
                     <div class="absolute bg-white rounded-full p-2 top-[-20px] right-[20px]">
@@ -304,7 +311,7 @@
                     </div>
                 </div>
 
-                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] backdrop-blur-sm rounded-2xl text-white text-[20px] relative">
+                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] light:bg-card-light backdrop-blur-sm rounded-2xl text-white light:text-black text-[20px] relative">
                     These advances made air travel safer, more economical, and technologically sophisticated. Airlines expanded long-haul networks while maintaining cost control through automation. As the century closed, the stage was set for aircraft that would merge digital intelligence with cutting-edge materials.
 
                     <div class="absolute bg-white rounded-full p-2 top-[-20px] right-[20px]">
@@ -318,7 +325,7 @@
 
     <!-- History Era 5 -->
     <div class="relative mb-4">
-        <div class="min-h-10 flex justify-center items-center bg-white rounded-3xl font-bold mx-5 mt-3">
+        <div class="min-h-10 flex justify-center items-center bg-white light:bg-black light:text-white rounded-3xl font-bold mx-5 mt-3">
             2010 - Plane's are now <span class="ml-1 text-amber-800">Fully Digitized</span>
         </div>
 
@@ -332,7 +339,7 @@
 
             <!-- write up -->
             <div class="max-w-[680px] min-w-[300px] p-5 absolute top-0">
-                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] backdrop-blur-sm rounded-2xl text-white text-[20px] relative">
+                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] light:bg-card-light backdrop-blur-sm rounded-2xl text-white light:text-black text-[20px] relative">
                     The modern aviation era began with the Boeing 787 Dreamliner and Airbus A350, both built largely from carbon-fiber composites. These materials reduced weight, increased durability, and improved fuel efficiency by up to 25 percent. Passengers also benefited from higher humidity, larger windows, and quieter cabins.
 
                     <div class="absolute bg-white rounded-full p-2 top-[-20px] right-[20px]">
@@ -340,7 +347,7 @@
                     </div>
                 </div>
 
-                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] backdrop-blur-sm rounded-2xl text-white text-[20px] relative">
+                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] light:bg-card-light backdrop-blur-sm rounded-2xl text-white light:text-black text-[20px] relative">
                     Engines like the Rolls-Royce Trent XWB and GE GEnx pushed performance to new heights. With lower emissions and longer ranges, airlines could now operate ultra-long-haul routes economically. Air travel became both greener and more globally connected.
 
                     <div class="absolute bg-white rounded-full p-2 top-[-20px] right-[20px]">
@@ -348,7 +355,7 @@
                     </div>
                 </div>
 
-                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] backdrop-blur-sm rounded-2xl text-white text-[20px] relative">
+                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] light:bg-card-light backdrop-blur-sm rounded-2xl text-white light:text-black text-[20px] relative">
                     Digital innovation reached new levels with real-time monitoring, predictive maintenance, and advanced flight management systems. Aircraft became smarter, capable of diagnosing issues mid-flight and optimizing performance automatically. The cockpit evolved into a fully digital environment, merging human oversight with machine precision.
 
                     <div class="absolute bg-white rounded-full p-2 top-[-20px] right-[20px]">
@@ -356,7 +363,7 @@
                     </div>
                 </div>
 
-                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] backdrop-blur-sm rounded-2xl text-white text-[20px] relative">
+                <div class="w-full h-fit p-3 pt-6 my-8 bg-[#ffffff36] light:bg-card-light backdrop-blur-sm rounded-2xl text-white light:text-black text-[20px] relative">
                     Looking ahead, aviation is turning toward sustainability through electric propulsion, hydrogen fuel, and sustainable aviation fuels. Concepts like the Boom Overture and Airbus ZEROe signal a renewed push for efficiency and speed. This generation represents not just an evolution in flight — but a transformation toward cleaner, smarter, and more sustainable skies.
 
                     <div class="absolute bg-white rounded-full p-2 top-[-20px] right-[20px]">
@@ -472,6 +479,8 @@
             menu.style.top = '-100%';
         }
     </script>
+
+    <script src="./themeSwitcher.js"></script>
 
 </body>
 </html>

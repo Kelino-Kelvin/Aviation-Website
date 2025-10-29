@@ -22,7 +22,7 @@
 
 @layer utilities{
     .animate-slideAvWords {
-    animation: slideAvWords 10s infinite ease-out;
+    animation: slideAvWords 12s infinite ease-out;
     }
 }
 
@@ -52,3 +52,48 @@
     transform: translateY(-6em);
   }
 }
+
+
+/* Custom colors */
+:root{
+  --fade-bg: #171717;
+}
+
+
+/* Light theme set up */
+[data-theme="light"] {
+  --fade-bg: #D1D5DB;
+}
+
+[data-theme="light"] .light\:bg-white {
+  background-color: #D1D5DB;
+}
+
+[data-theme="light"] .light\:text-black {
+  color: black;
+}
+
+[data-theme="light"] .light\:text-white {
+  color: white;
+}
+
+[data-theme="light"] .light\:bg-black {
+  background-color: rgb(31, 31, 31);
+}
+
+[data-theme="light"] .light\:header-black {
+  background-color: black;
+}
+
+[data-theme="light"] .light\:bg-card-light {
+  background-color: #82828282;
+}
+
+
+[data-theme="light"] .light\:show {
+  display: block;
+}
+[data-theme="light"] .light\:hide {
+  display: none;
+}
+
