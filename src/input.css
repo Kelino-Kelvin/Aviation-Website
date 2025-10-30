@@ -12,6 +12,8 @@
     --background-image-custom-b747image: url('../images/b-747.png');
     --background-image-custom-b787image: url('../images/b-787.png');
     --background-image-custom-a350image: url('../images/a-350.png');
+
+    --background-image-custom-a380image: url('../images/a-380.png');
 }
 
 @layer base{
@@ -21,9 +23,12 @@
 }
 
 @layer utilities{
-    .animate-slideAvWords {
-    animation: slideAvWords 12s infinite ease-out;
-    }
+  .animate-slideAvWords {
+  animation: slideAvWords 12s infinite ease-out;
+  }
+  .animate-slideSponsors {
+    animation: slideSponsors 20s infinite linear;
+  }
 }
 
 
@@ -50,6 +55,15 @@
   }
   100% {
     transform: translateY(-6em);
+  }
+}
+
+@keyframes slideSponsors {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
 
