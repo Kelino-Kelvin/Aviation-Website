@@ -43,9 +43,46 @@
     </div>
 
     <!-- Hero Section -->
-    <main class="bg-custom-image1 bg-cover bg-center h-lvh p-6 pb-12 mb-8 text-white relative">
-        <div class="w-auto rounded-2xl h-full p-2 backdrop-blur-[5px] shadow-white text-9xl flex justify-center items-center relative z-2 bg-[#ffffff1e]">
-            Enjoy The Show!
+    <main class="bg-custom-image1 bg-cover bg-center h-[80vh] md:h-lvh p-6 pb-12 mb-8 text-white relative">
+        <div class="rounded-2xl h-full p-8 backdrop-blur-[5px] shadow-white flex flex-wrap gap-5 relative z-2 bg-[#00000041] w-full">
+            <div class="flex-1 min-w-[200px] flex flex-col justify-center gap-5 pl-6">
+                <h1 class="text-4xl  md:text-7xl">
+                    This is a Captivating Headline :)
+                </h1>
+                <p class="text-xl">
+                    This is text that is supposed to wow you.
+                    <br>
+                    Thinking of these things is hard &#128517;
+                    <br>
+                    Just scroll down for the lesson &#128077;
+                </p>
+            </div>
+
+            <div class="flex-1 min-w-[200px] flex-col justify-center pl-6 hidden md:flex">
+                <h1 class="text-xl">
+                    Here's what you're gonna learn here:
+                </h1>        
+                <ul class="list-disc pl-6 ">
+                    <li>
+                        Some stuff
+                    </li>
+                    <li>
+                      Some more stuff
+                    </li>
+                    <li>
+                        Extra stuff
+                    </li>
+                    <li>
+                        And yh, you guessed it. More stuff!
+                    </li>
+                </ul>
+            </div>
+            <div class="w-full flex-none">
+                <div class="h-[100px] w-[100px] bg-white rounded-full p-4 absolute left-[50%] translate-x-[-50%] animate-slideArrow">
+                    <img src="../images/arrow-down.svg" alt="" class="h-full">
+                </div>
+                
+            </div>
         </div>
         <div class="absolute bottom-0 inset-x-0 h-40 w-full bg-linear-to-t from-(--fade-bg) to-transparent"></div>
     </main>
@@ -267,7 +304,7 @@
             </P>
         </div>
         <form class="mx-2 mb-2 flex items-center flex-wrap gap-3">
-            <input type="email" placeholder="Enter email" class="bg-[#ffffff36] light:bg-card-light font-light text-white light:text-black flex-1 min-w-[300px] rounded py-1 px-2 outline-none">
+            <input type="email" placeholder="Enter email" class="bg-[#ffffff36] light:bg-card-light font-light text-white light:text-black flex-1 min-w-[200px] rounded py-1 px-2 outline-none">
             <button class="bg-white light:bg-black light:text-white px-2 py-1 rounded cursor-pointer flex-auto w-full md:flex-none md:w-auto flex justify-center gap-2">
             <span>Confirm Email</span>
                 <img src="../images/mail-send.svg" alt="" class="w-5 -mt-0.5">

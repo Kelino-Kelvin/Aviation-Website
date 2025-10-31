@@ -29,6 +29,9 @@
   .animate-slideSponsors {
     animation: slideSponsors 20s infinite linear;
   }
+  .animate-slideArrow {
+    animation: slideArrow 2s infinite linear;
+  }
 }
 
 
@@ -64,6 +67,21 @@
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+@keyframes slideArrow {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-30%);
+  }
+  60% {
+    transform: translateY(40%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
