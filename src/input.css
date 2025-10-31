@@ -5,7 +5,9 @@
 @theme{
     /* Background Images */
     --background-image-custom-image1: url('../images/airplane-bg-1.jpg');
-    
+
+    --background-image-custom-wrightFlyer: url('../images/wright_flyer-removebg-preview.png');
+    --background-image-custom-boeing247: url('../images/boeing-247-removebg-preview.png');
     --background-image-custom-dc3Image: url('../images/dc-3.png');
     --background-image-custom-dc8Image: url('../images/dc-8.png');
     --background-image-custom-dc10image: url('../images/dc-10.png');
